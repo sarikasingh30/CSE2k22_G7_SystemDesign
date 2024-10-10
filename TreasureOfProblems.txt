@@ -396,3 +396,303 @@ B) 4 ms
 C) 3 ms
 D) 6 ms
 Ans => a
+
+What condition can occur if two processes both hold semaphores and are waiting for each other’s semaphore to be released?
+A. Starvation
+B. Deadlock
+C. Mutual exclusion
+D. Race condition
+Answer: B
+
+In a system using semaphores, if a process performs Wait and never performs Signal, what might happen?
+A. Deadlock
+B. Resource leakage
+C. Starvation
+D. Priority inversion
+Answer: A
+
+Which of the following operations on a semaphore is not allowed?
+A. Incrementing a semaphore
+B. Decrementing a semaphore
+C. Reading the current value of a semaphore
+D. Blocking a process using a semaphore
+Answer: C
+
+What can happen if the value of a binary semaphore is accidentally set to 2?
+A. Mutual exclusion is broken
+B. Deadlock occurs
+C. Race conditions are prevented
+D. Only one process proceeds
+Answer: A
+
+In which situation would a semaphore fail to synchronize processes correctly?
+A. When the Wait operation is not performed atomically
+B. When the Signal operation is atomic
+C. When the semaphore is initialized properly
+D. When a process follows the semaphore rules strictly
+Answer: A
+
+Which is not a characteristic of semaphore operations?
+A. Atomic execution
+B. They can cause busy waiting
+C. They can decrement a semaphore to negative values
+D. They cannot be used for process synchronization
+Answer: D
+
+In a counting semaphore, if the initial value is 3, and five processes perform Wait, how many will be blocked?
+
+A. 1
+B. 2
+C. 3
+D. None
+Answer: B
+
+Which scenario might cause starvation when using semaphores?
+A. A low-priority process waits indefinitely for a high-priority process to release the semaphore
+B. A process continuously performs Signal operations
+C. Processes are executing concurrently
+D. All processes have equal priority
+Answer: A
+
+...................................................................................
+
+1. What is a process in an operating system?
+a) A program in execution
+b) A system call
+c) A collection of threads
+d) A resource allocation unit
+
+Answer: a) A program in execution
+
+2. Which of the following is not a state of a process?
+a) Ready
+b) Blocked
+c) Running
+d) Null
+
+Answer: d) Null
+
+3. What is the Process Control Block (PCB)?
+a) A block that controls process synchronization
+b) A data structure that stores process information
+c) A component of CPU for managing processes
+d) A block that handles interrupts
+
+Answer: b) A data structure that stores process information
+
+4. What does the “ready” state of a process mean?
+a) The process is waiting for I/O to complete
+b) The process is currently being executed
+c) The process is waiting to be assigned to the CPU
+d) The process has completed execution
+
+Answer: c) The process is waiting to be assigned to the CPU
+
+5. In which state does a process enter after an I/O operation?
+a) Running
+b) Blocked
+c) Terminated
+d) Ready
+
+Answer: b) Blocked
+
+6. Which scheduling algorithm selects the process with the smallest execution time remaining?
+a) First-Come, First-Served (FCFS)
+b) Shortest Remaining Time First (SRTF)
+c) Priority Scheduling
+d) Round Robin
+
+Answer: b) Shortest Remaining Time First (SRTF)
+
+7. What is the main purpose of the process scheduler?
+a) To control all process inputs and outputs
+b) To allocate system resources to processes
+c) To allocate CPU time to processes
+d) To manage file systems
+
+Answer: c) To allocate CPU time to processes
+
+8. Which of the following is not a process scheduling algorithm?
+a) First-Come, First-Served
+b) Shortest Job Next
+c) Banker's Algorithm
+d) Round Robin
+
+Answer: c) Banker's Algorithm
+
+9. A process enters the ‘terminated’ state when:
+a) It has an I/O request
+b) It completes execution
+c) It is waiting for CPU
+d) It is preempted by a higher priority process
+
+Answer: b) It completes execution
+
+10. What does preemption mean in process scheduling?
+a) A process voluntarily gives up the CPU
+b) A process is forcibly removed from the CPU
+c) A process waits for I/O completion
+d) A process is blocked due to an interrupt
+
+Answer: b) A process is forcibly removed from the CPU
+
+11. Which type of scheduler is responsible for selecting processes from the job queue and loading them into the ready queue?
+a) Long-term scheduler
+b) Medium-term scheduler
+c) Short-term scheduler
+d) I/O scheduler
+
+Answer: a) Long-term scheduler
+
+12. The __________ scheduler selects processes from the ready queue and assigns them to the CPU.
+a) Long-term
+b) Medium-term
+c) Short-term
+d) None of the above
+
+Answer: c) Short-term
+
+13. Which of the following scheduling algorithms may cause starvation?
+a) First-Come, First-Served
+b) Round Robin
+c) Priority Scheduling
+d) Shortest Job First
+
+Answer: c) Priority Scheduling
+
+14. In round-robin scheduling, the time a process is allowed to run before being preempted is called:
+a) Burst time
+b) Time quantum
+c) Context switch
+d) Response time
+
+Answer: b) Time quantum
+
+15. What is context switching?
+a) Saving and loading a process state
+b) Switching from kernel mode to user mode
+c) Changing the priority of processes
+d) Terminating a process
+
+Answer: a) Saving and loading a process state
+
+16. Which one of the following is a preemptive scheduling algorithm?
+a) FCFS
+b) Shortest Job First
+c) Round Robin
+d) None of the above
+
+Answer: c) Round Robin
+
+17. In multithreading, the term "thread" refers to:
+a) A collection of processes
+b) A unit of CPU utilization
+c) A type of interrupt
+d) A hardware component
+
+Answer: b) A unit of CPU utilization
+
+18. Which of the following is true about inter-process communication (IPC)?
+a) Processes share data directly
+b) Processes communicate without synchronization
+c) It allows processes to communicate with each other
+d) It is used only for distributed systems
+
+Answer: c) It allows processes to communicate with each other
+
+19. The system call used to create a new process in UNIX is:
+a) exec()
+b) wait()
+c) fork()
+d) exit()
+
+Answer: c) fork()
+
+20. What happens to a child process if the parent process is terminated?
+a) The child process is automatically terminated
+b) The child process continues to run
+c) The child process becomes a zombie process
+d) The child process is put into the ready queue
+
+Answer: b) The child process continues to run
+
+21. A process that has finished execution but still has an entry in the process table is called:
+a) Orphan process
+b) Zombie process
+c) Terminated process
+d) Deadlock process
+
+Answer: b) Zombie process
+
+22. What is the main role of a medium-term scheduler?
+a) To swap out processes from memory
+b) To prioritize CPU-bound processes
+c) To handle interrupts
+d) To perform context switching
+
+Answer: a) To swap out processes from memory
+
+23. What is the primary advantage of multiprogramming?
+a) Improved memory utilization
+b) Reduced response time
+c) Increased CPU utilization
+d) Simpler process management
+
+Answer: c) Increased CPU utilization
+
+24. The time between the submission of a process and its completion is called:
+a) Waiting time
+b) Turnaround time
+c) Response time
+d) Execution time
+
+Answer: b) Turnaround time
+
+25. In priority scheduling, the process with the highest priority:
+a) Is executed first
+b) Is executed last
+c) Waits until all lower priority processes finish
+d) Is assigned a larger time quantum
+
+Answer: a) Is executed first
+
+26. A process that is unable to progress due to unavailability of required resources is in:
+a) Blocked state
+b) Running state
+c) Starvation
+d) Deadlock
+
+Answer: d) Deadlock
+
+27. In process management, aging is a technique used to:
+a) Prevent starvation
+b) Implement preemption
+c) Allocate resources fairly
+d) Decrease context switching
+
+Answer: a) Prevent starvation
+
+28. What is a "thread pool"?
+a) A collection of inactive threads
+b) A collection of pre-created threads
+c) A group of threads waiting for I/O
+d) A group of threads in blocked state
+
+Answer: b) A collection of pre-created threads
+
+29. Which of the following is used to synchronize processes?
+a) Pipes
+b) Mutex
+c) Fork
+d) exec()
+
+Answer: b) Mutex
+
+30. Which process state transitions occur when a process is preempted?
+a) Running to Terminated
+b) Running to Ready
+c) Ready to Running
+d) Blocked to Ready
+
+Answer: b) Running to Ready
+..........................................................................................
